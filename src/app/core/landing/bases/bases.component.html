@@ -1,0 +1,6 @@
+<ng-container *ngIf="screenWidth > 639; else mobileTemplate">
+  <app-desktop></app-desktop>
+</ng-container>
+<ng-template #mobileTemplate>
+  <app-mobile></app-mobile>
+</ng-template>

@@ -1,14 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { DrawerService } from './components/drawer.service';
+import { Component, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-mobile',
   templateUrl: './mobile.component.html',
   styleUrls: ['./mobile.component.scss']
 })
-export class MobileComponent implements OnInit {
-  isOpen: boolean = false;
-  sections: string[] = ['Inicio', 'Servicios', 'AcercaDe', 'Contacto'];
+export class MobileComponent {
   images: string[] = [
     '../../../../assets/landing/Property 1=Default.png',
     '../../../../assets/landing/Property 1=Variant2.png',
@@ -17,8 +14,9 @@ export class MobileComponent implements OnInit {
   currentImageIndex = 0;
   currentImage!: string;
 
-  constructor(private drawerService: DrawerService) {
+  constructor( private renderer: Renderer2) {
     this.currentImage = this.images[this.currentImageIndex];
+   
   }
 
   ngOnInit(): void {
@@ -26,6 +24,8 @@ export class MobileComponent implements OnInit {
     setInterval(() => {
       this.changeImage();
     }, 5000);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
   }
 
   changeImage() {
@@ -33,18 +33,7 @@ export class MobileComponent implements OnInit {
     this.currentImage = this.images[this.currentImageIndex];
   }
 
-  openDrawer() {
-    this.drawerService.toggleDrawer();
-  }
-
-  scrollToSection(section: string) {
-    const element = document.getElementById(section);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      this.isOpen = false; // Cerrar el drawer después de hacer clic en un elemento del menú
-    }
-  }
   scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    this.renderer.setProperty(window, 'scrollTo', { top: 0, left: 0, behavior: 'smooth' });
   }
 }

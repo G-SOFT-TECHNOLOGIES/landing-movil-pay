@@ -15,7 +15,7 @@
   <div class="w-full h-auto justify-center items-center">
     <div class="relative">
       <!-- Logo en la esquina superior izquierda -->
-      <img class="w-20 ml-10 absolute top-0 left-4" src="../../../../assets/landing/logo.png" />
+      <img class="w-24 ml-2  absolute top-0 left-4" src="../../../../assets/landing/logo.png" />
   
       <!-- Imagen principal -->
       <div class="w-full md:w-[48rem] lg:w-[70.875rem] h-full md:h-[31.25rem] lg:h-[47.2375rem] relative">
@@ -23,9 +23,22 @@
       </div>
     </div>
   </div>
+  <div class="container">
+    <div class="content p-10">
+      <span class="text-emerald-700 text-base font-bold font-['Montserrat']">Líder en soluciones de pago integradas en Venezuela.</span>
+      <span class="text-neutral-500 text-base font-normal font-['Montserrat']"> Nos especializamos en el</span>
+      <span class="text-emerald-700 text-base font-bold font-['Montserrat']"> diseño y comercialización</span>
+      <span class="text-neutral-500 text-base font-normal font-['Montserrat']"> de herramientas innovadoras que facilitan las transacciones financieras,</span>
+      <span class="text-emerald-700 text-base font-bold font-['Montserrat']"> adaptándose a las necesidades de cada negocio.</span>
+    </div>
+  </div>
+  
   
   <app-servicios-mobile id="section1"></app-servicios-mobile>
   <app-funciona-mobile id="section2"></app-funciona-mobile>
   <app-aliados-mobile id="section3"></app-aliados-mobile>
   <app-contacto-mobile id="section4"></app-contacto-mobile>
-  
+  <!-- Botón flotante -->
+  <button class="floating-button" (click)="scrollToTop()">
+    <i class="fas fa-arrow-up"></i>
+  </button>

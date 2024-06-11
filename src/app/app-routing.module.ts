@@ -11,6 +11,10 @@ const routes: Routes = [
     path:'landing',
     loadChildren:()=>import('../app/core/landing/landing.module').then(m=>m.LandingModule),
   },
+  {
+    path:'politicas',
+    loadChildren:()=>import('../app/core/landing/bases/bases.module').then(m=>m.BasesModule),
+  },
 ];
 
 @NgModule({

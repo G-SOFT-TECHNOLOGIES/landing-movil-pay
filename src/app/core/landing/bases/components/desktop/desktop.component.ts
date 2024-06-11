@@ -1,10 +1,9 @@
-import { Component, HostListener, inject } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-desktop',
   templateUrl: './desktop.component.html',
-  styleUrls: ['./desktop.component.scss'],
+  styleUrls: ['./desktop.component.scss']
 })
 export class DesktopComponent {
   sections: string[] = ['Servicio', '¿Cómo funciona?', 'Aliados', 'Contactanos'];
@@ -20,7 +19,7 @@ export class DesktopComponent {
   currentImageIndex = 0;
   currentImage!: string;
 
-  constructor(private dialog: MatDialog) {
+  constructor() {
     this.currentImage = this.images[this.currentImageIndex];
    }
   ngOnInit(): void {
@@ -29,6 +28,7 @@ export class DesktopComponent {
       this.changeImage();
     }, 5000);
 
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 
   }
 
@@ -58,6 +58,4 @@ export class DesktopComponent {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     this.activeSection = ''; // Optional: Reset the active section
   }
-
-  
 }

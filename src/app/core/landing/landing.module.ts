@@ -15,6 +15,10 @@ import { FuncionaComponentMobile } from './mobile/components/funciona/funciona.c
 import { ContactoComponentMobile } from './mobile/components/contacto/contacto.component';
 import { DrawerComponent } from './mobile/components/drawer/drawer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { BasesComponent } from './bases/bases.component';
+import { MaterialExampleModule } from 'src/material.module';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
@@ -27,13 +31,19 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ServiciosComponentMobile,
     FuncionaComponentMobile,
     ContactoComponentMobile,
-    DrawerComponent
+    DrawerComponent,
+    
   ],
   imports: [
     CommonModule,
     LandingRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    MaterialExampleModule
 
+  ],
+  exports:[
+    ContactoComponentMobile,
+    ContactoComponent,
   ]
 })
 export class LandingModule { }
