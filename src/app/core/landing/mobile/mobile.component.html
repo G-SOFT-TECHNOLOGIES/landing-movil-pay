@@ -1,18 +1,30 @@
-
-<div class="w-full h-auto justify-center items-center">
-    <div class="relative">
-        <!-- Logo en la esquina superior izquierda -->
-        <img class="w-20  ml-10 absolute top-0 left-4" src="../../../../assets/landing/logo.png" />
-
-        <!-- Imagen principal -->
-        <div class="w-full md:w-[48rem] lg:w-[70.875rem] h-full md:h-[31.25rem] lg:h-[47.2375rem] relative">
-            <img class="w-full h-full" [src]="currentImage" />
-        </div>
+<!-- Botón para abrir el drawer -->
+<div class="w-full p-4 bg-white flex justify-between items-center">
+    <button (click)="openDrawer()" class="p-2 bg-green-500 text-white rounded-md focus:outline-none">
+      Menu
+    </button>
+    <div class="w-[30px] h-4 relative rounded-[9px] flex-col justify-start items-start flex">
+      <!-- Your Logo or Icon -->
     </div>
-</div>
-
-
-<app-servicios-mobile></app-servicios-mobile>
-<app-funciona-mobile></app-funciona-mobile>
-<app-aliados-mobile></app-aliados-mobile>
-<app-contacto-mobile></app-contacto-mobile>
+  </div>
+  
+  <!-- Drawer Component -->
+  <app-drawer></app-drawer>
+  
+  <div class="w-full h-auto justify-center items-center">
+    <div class="relative">
+      <!-- Logo en la esquina superior izquierda -->
+      <img class="w-20 ml-10 absolute top-0 left-4" src="../../../../assets/landing/logo.png" />
+  
+      <!-- Imagen principal -->
+      <div class="w-full md:w-[48rem] lg:w-[70.875rem] h-full md:h-[31.25rem] lg:h-[47.2375rem] relative">
+        <img class="w-full h-full" [src]="currentImage" />
+      </div>
+    </div>
+  </div>
+  
+  <app-servicios-mobile id="section1"></app-servicios-mobile>
+  <app-funciona-mobile id="section2"></app-funciona-mobile>
+  <app-aliados-mobile id="section3"></app-aliados-mobile>
+  <app-contacto-mobile id="section4"></app-contacto-mobile>
+  

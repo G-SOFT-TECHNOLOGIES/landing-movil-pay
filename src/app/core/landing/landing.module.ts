@@ -13,6 +13,7 @@ import { AliadosComponentMobile } from './mobile/components/aliados/aliados.comp
 import { ServiciosComponentMobile } from './mobile/components/servicios/servicios.component';
 import { FuncionaComponentMobile } from './mobile/components/funciona/funciona.component';
 import { ContactoComponentMobile } from './mobile/components/contacto/contacto.component';
+import { DrawerComponent } from './mobile/components/drawer/drawer.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { ContactoComponentMobile } from './mobile/components/contacto/contacto.c
     AliadosComponentMobile,
     ServiciosComponentMobile,
     FuncionaComponentMobile,
-    ContactoComponentMobile
+    ContactoComponentMobile,
+    DrawerComponent
   ],
   imports: [
     CommonModule,
