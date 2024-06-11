@@ -1,8 +1,8 @@
 <div class="menu-wrapper bg-black" >
     <div class="lg:w-[94.5rem] h-auto px-2 py-2.5 flex justify-start items-center gap-6 lg:gap-12 flex-wrap " >
-        <div  class="cursor-pointer">
+        <a [routerLink]="['/landing']"  class="cursor-pointer">
             <img src="../../../../assets/landing/logo.png" alt="Home Logo" class="w-12 md:w-16 lg:w-24 h-12 md:h-16 lg:h-24 object-contain" />
-        </div>
+        </a>
         <!-- <ng-container *ngFor="let section of sections; let i = index">
             <div [ngClass]="{'selected': section === activeSection}" class="cursor-pointer">
                 <div class="px-2 md:px-4 lg:px-[3.0625rem] py-2.5 rounded-full border-b-4" [class.border-green-500]="section === activeSection" [class.border-transparent]="section !== activeSection" flex justify-center items-center gap-2.5>
