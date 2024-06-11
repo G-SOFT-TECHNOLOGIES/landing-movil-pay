@@ -23,7 +23,7 @@ export class DrawerComponent {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      this.closeDrawer();
+      // this.closeDrawer();
     }
   }
 }

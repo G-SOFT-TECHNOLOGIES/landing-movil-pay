@@ -14,6 +14,7 @@ import { ServiciosComponentMobile } from './mobile/components/servicios/servicio
 import { FuncionaComponentMobile } from './mobile/components/funciona/funciona.component';
 import { ContactoComponentMobile } from './mobile/components/contacto/contacto.component';
 import { DrawerComponent } from './mobile/components/drawer/drawer.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { DrawerComponent } from './mobile/components/drawer/drawer.component';
   imports: [
     CommonModule,
     LandingRoutingModule,
+    FontAwesomeModule
 
   ]
 })

@@ -1,0 +1,11 @@
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50; // Asegúrate de que el z-index sea mayor que el del contenido
+}
+
+.content {
+  padding-top: 4rem; // Ajusta este valor dependiendo de la altura de tu header
+}
