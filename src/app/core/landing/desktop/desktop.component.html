@@ -1,0 +1,55 @@
+<div class="menu-wrapper" [class.scrolled]="isScrolled">
+    <div class="lg:w-[94.5rem] h-auto px-4 py-2.5 flex justify-start items-center gap-6 lg:gap-12 flex-wrap" [ngClass]="{'scrolled': isScrolled}">
+        <div (click)="scrollToTop()" class="cursor-pointer">
+            <img src="../../../../assets/landing/logo.png" alt="Home Logo" class="w-12 md:w-16 lg:w-24 h-12 md:h-16 lg:h-24 object-contain" />
+        </div>
+        <ng-container *ngFor="let section of sections; let i = index">
+            <div [ngClass]="{'selected': section === activeSection}" (click)="scrollToSection(section)" class="cursor-pointer">
+                <div class="px-2 md:px-4 lg:px-[3.0625rem] py-2.5 rounded-full border-b-4" [class.border-green-500]="section === activeSection" [class.border-transparent]="section !== activeSection" flex justify-center items-center gap-2.5>
+                    <div class="text-lime-600 text-sm md:text-base lg:text-2xl font-bold font-['Montserrat']">{{ section }}</div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>
+
+<div class="w-full">
+    <div class="grid grid-cols-1 md:grid-cols-2">
+        <div class="md:ml-[1rem] lg:ml-[5rem] mt-10 md:mt-[5rem] lg:mt-[8rem]">
+            <div class="md:w-[18.75rem] lg:w-[25rem] h-[36.1875rem] flex-col justify-start items-start gap-10 md:gap-[0.9375rem] lg:gap-[1.25rem] inline-flex">
+                <div class="h-auto relative">
+                    <img src="../../../../assets/landing/logo.png" alt="Logo" class="w-full h-full object-contain"/>
+                </div>
+                <div class="w-full md:w-[31.25rem] lg:w-[34.375rem]">
+                    <span class="text-emerald-700 text-xl md:text-2xl font-bold font-['Montserrat']">Líder en soluciones de pago integradas en Venezuela.</span>
+                    <span class="text-neutral-500 text-xl md:text-2xl font-normal font-['Montserrat']"> Nos especializamos en el</span>
+                    <span class="text-emerald-700 text-xl md:text-2xl font-bold font-['Montserrat']"> diseño y comercialización</span>
+                    <span class="text-neutral-500 text-xl md:text-2xl font-normal font-['Montserrat']"> de herramientas innovadoras que facilitan las transacciones financieras,</span>
+                    <span class="text-emerald-700 text-xl md:text-2xl font-bold font-['Montserrat']"> adaptándose a las necesidades de cada negocio.</span>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="w-full h-[47.25rem] relative">
+                <img class="w-full md:w-[48rem] lg:w-[70.875rem] h-full md:h-[31.25rem] lg:h-[47.2375rem] left-0 md:left-[-3.125rem] lg:left-0 top-0 absolute" [src]="currentImage" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Aquí irían las secciones correspondientes -->
+<div id="Servicio" class="section">
+    <app-servicios></app-servicios>
+</div>
+
+<div id="¿Cómo funciona?" class="section">
+    <app-funciona></app-funciona>
+</div>
+
+<div id="Aliados" class="section">
+    <app-aliados></app-aliados>
+</div>
+
+<div id="Contactanos" class="section">
+    <app-contacto></app-contacto>
+</div>

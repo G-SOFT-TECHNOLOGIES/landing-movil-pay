@@ -1,0 +1,13 @@
+/* menu.component.css */
+.menu-wrapper {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    transition: background-color 0.3s ease;
+
+}
+
+.menu-wrapper.scrolled {
+    background-color: black;
+}
