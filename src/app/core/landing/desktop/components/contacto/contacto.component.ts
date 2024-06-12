@@ -1,5 +1,4 @@
-import { Component, inject } from '@angular/core';
-import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { Component } from '@angular/core';
 
 
 @Component({
@@ -9,7 +8,7 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 
 })
 export class ContactoComponent {
-  constructor(private dialog: MatDialog) {}
+  constructor() {}
 
 
 

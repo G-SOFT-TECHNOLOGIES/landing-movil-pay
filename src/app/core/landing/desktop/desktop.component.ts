@@ -1,5 +1,4 @@
-import { Component, HostListener, inject } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-desktop',
@@ -20,7 +19,7 @@ export class DesktopComponent {
   currentImageIndex = 0;
   currentImage!: string;
 
-  constructor(private dialog: MatDialog) {
+  constructor() {
     this.currentImage = this.images[this.currentImageIndex];
    }
   ngOnInit(): void {
