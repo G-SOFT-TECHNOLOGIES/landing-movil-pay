@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 100%; /* Ajusta según sea necesario */
+  }
+  
+  .content {
+    max-width: 100%;
+  }
+  .floating-button {
+      position: fixed;
+      bottom: 16px;
+      right: 16px;
+      width: 56px; /* Ajusta el tamaño según sea necesario */
+      height: 56px; /* Ajusta el tamaño según sea necesario */
+      background-color: #4caf50; /* Color de fondo del botón */
+      border-radius: 50%; /* Hace que el botón sea redondo */
+      border: none; /* Quita el borde del botón */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agrega una sombra suave al botón */
+      cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+      display: flex; /* Permite alinear el contenido verticalmente */
+      justify-content: center; /* Centra el contenido horizontalmente */
+      align-items: center; /* Centra el contenido verticalmente */
+      color: #ffffff; /* Color del icono */
+      font-size: 24px; /* Tamaño del icono */
+    }

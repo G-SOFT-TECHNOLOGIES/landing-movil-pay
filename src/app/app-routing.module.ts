@@ -15,6 +15,10 @@ const routes: Routes = [
     path:'politicas',
     loadChildren:()=>import('../app/core/landing/bases/bases.module').then(m=>m.BasesModule),
   },
+  {
+    path:'cookies',
+    loadChildren:()=>import('../app/core/politicas/cookies/cookies.module').then(m=>m.CookiesModule),
+  },
 ];
 
 @NgModule({
